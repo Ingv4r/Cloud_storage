@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/bootstrap.css') }}" rel="stylesheet">
+</head>
+<body>
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+                {{ user.email }}
+                {{ user.registered_at.strftime('%Y-%m-%d at %H:%M:%S') }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
